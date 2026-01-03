@@ -1,11 +1,11 @@
 // Sample timetable data
 const timetableData = [
-  { time: '09:00 - 10:00', subject: 'Mathematics' },
-  { time: '10:00 - 11:00', subject: '' }, // Gap
-  { time: '11:00 - 12:00', subject: 'Physics' },
-  { time: '12:00 - 13:00', subject: '' }, // Gap
-  { time: '13:00 - 14:00', subject: 'Chemistry' },
-  { time: '14:00 - 15:00', subject: '' }, // Gap
+  { time: '09:00 - 10:00', subject: 'Discrete Mathematics' },
+  { time: '10:00 - 11:00', subject: 'Engineering Physics' }, // Gap
+  { time: '11:00 - 12:00', subject: 'DSA' },
+  { time: '12:00 - 13:00', subject: 'Soft Skills' }, // Gap
+  { time: '13:00 - 14:00', subject: 'C++' },
+  { time: '14:00 - 15:00', subject: 'BEEE' }, // Gap
   { time: '15:00 - 16:00', subject: 'English' }
 ];
 
