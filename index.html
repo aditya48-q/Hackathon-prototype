@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adaptive Student Time Utilisation & Learning</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="logo.png" />
+</head>
+<body>
+  <!-- Header & Navbar -->
+  <header class="header">
+    <div class="container nav-flex">
+      <img src="logo.png" alt="Institution Logo" class="logo" />
+      <span class="site-title">Hellfire Hackers</span>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">&#9776;</button>
+      <nav class="navbar" id="navbarMenu">
+        <a href="#" class="nav-link active">Dashboard</a>
+        <a href="#schedule" class="nav-link">My Schedule</a>
+        <a href="#suggestions" class="nav-link">Suggestions</a>
+        <a href="#profile" class="nav-link">Profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Landing Page Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Transform Your Free Time Into Growth</h1>
+      <p class="subtitle">Empowering students to make the most of every moment with AI-driven suggestions and collaborative opportunities.</p>
+      <a href="#dashboard" class="btn-primary">Get Started</a>
+      <div class="features-grid">
+        <div class="card">
+          <span class="icon">🤖</span>
+          <h2>AI Suggestions</h2>
+          <p>Personalized recommendations for learning, collaboration, and growth.</p>
+        </div>
+        <div class="card">
+          <span class="icon">📅</span>
+          <h2>Timetable</h2>
+          <p>Visualize your daily schedule and spot free time instantly.</p>
+        </div>
+        <div class="card">
+          <span class="icon">🏆</span>
+          <h2>Activities</h2>
+          <p>Discover activities to fill gaps and boost your skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard -->
+  <section id="dashboard" class="dashboard">
+    <div class="container">
+      <h2>Today's Timetable</h2>
+      <div id="timetable" class="timetable"></div>
+    </div>
+  </section>
+
+  <!-- Smart Suggestions -->
+  <section id="suggestions" class="suggestions">
+    <div class="container">
+      <h2>Smart Suggestions</h2>
+      <div id="suggestion-cards" class="suggestion-grid"></div>
+    </div>
+  </section>
+
+  <!-- Activity Detail Page (Modal) -->
+  <div id="activity-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <div id="activity-detail"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <span>Adaptive Student Time Utilisation & Learning</span>
+        <span>Contact: info@adaptive-student.edu</span>
+      </div>
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#suggestions">Suggestions</a>
+        <a href="#profile">Profile</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navbarMenu = document.getElementById('navbarMenu');
+    mobileMenuBtn.addEventListener('click', function() {
+      navbarMenu.classList.toggle('mobile-active');
+    });
+    // Optional: close menu on link click (mobile)
+    document.querySelectorAll('.navbar .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 800) {
+          navbarMenu.classList.remove('mobile-active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
